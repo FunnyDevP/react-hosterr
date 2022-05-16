@@ -1,0 +1,9 @@
+@function rem-cal($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue
+}
+
+.main {
+  margin: rem-cal(45) rem-cal(140);
+  height: 100vh;
+}

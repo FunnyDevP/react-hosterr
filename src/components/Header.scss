@@ -1,0 +1,51 @@
+@function rem-cal($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &__hiring {
+      padding: rem-cal(10);
+      border: rem-cal(1) solid transparent;
+      border-radius: rem-cal(500);
+      font-size: rem-cal(10);
+      color: white;
+      font-weight: 700;
+      height: rem-cal(5);
+      display: flex;
+      align-items: center;
+      background: rgb(252, 176, 69);
+      background: linear-gradient(90deg, rgba(252, 176, 69, 1) 50%, rgba(253, 29, 29, 1) 100%);
+      margin-left: rem-cal(10);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__signin {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    &__join-waitlist-bt {
+      background-color: #4977ea;
+      padding: rem-cal(20);
+      border-radius: rem-cal(5);
+      color: white;
+      font-size: rem-cal(18);
+      font-weight: 600;
+      margin-left: rem-cal(25);
+    }
+  }
+}
