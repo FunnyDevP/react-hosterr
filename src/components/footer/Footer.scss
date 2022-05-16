@@ -1,0 +1,33 @@
+@function rem-cal($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue
+}
+
+.footer_container {
+  display: flex;
+  margin-bottom: rem-cal(75);
+  //border: 1px solid;
+  justify-content: space-between;
+  align-items: center;
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+
+    &__between_txt {
+      margin-right: rem-cal(25);
+    }
+  }
+
+  &__agent {
+    display: flex;
+    align-items: center;
+
+    &__avatar {
+      margin-right: rem-cal(15);
+    }
+
+    &__talk_with_specialist {
+      font-weight: 600;
+    }
+  }
+}
