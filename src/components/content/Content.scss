@@ -1,0 +1,93 @@
+@function rem-cal($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue
+}
+
+.content_container {
+  display: flex;
+  justify-content: space-between;
+
+
+  &__message {
+    width: 48%;
+
+    &__title {
+      font-size: rem-cal(50);
+      font-weight: 700;
+      margin-bottom: rem-cal(10);
+    }
+
+    &__detail {
+      font-size: rem-cal(18);
+      font-weight: 300;
+      margin-bottom: rem-cal(20);
+    }
+
+    &__email {
+      display: flex;
+      margin-bottom: rem-cal(30);
+      input[type=email] {
+        padding: 12px 20px;
+        height: initial;
+        width: 50%;
+        border-radius: 5px;
+        border: 1px solid white;
+
+      }
+      ::placeholder {
+        color: black;
+        opacity: 70%;
+        font-size: 18px;
+      }
+      &__join-waitlist-bt {
+        background-color: #4977ea;
+        padding: rem-cal(20);
+        border-radius: rem-cal(5);
+        color: white;
+        font-size: rem-cal(18);
+        font-weight: 600;
+        margin-left: rem-cal(25);
+      }
+    }
+
+    &__sub_detail {
+      display: flex;
+      align-items: center;
+      &__image {
+        margin-right: rem-cal(20);
+      }
+      &__text {
+        font-size: rem-cal(18);
+        font-weight: 300;
+      }
+    }
+
+    &__image {
+      position: relative;
+      &__font {
+        position: absolute;
+        z-index: 1;
+        width: rem-cal(350);
+      }
+      &__blue_shape {
+        position: absolute;
+        transform: rotate(-42deg);
+        width: rem-cal(350);
+
+      }
+      &__pink_shape {
+        position: absolute;
+        transform: rotate(-28deg);
+        width: rem-cal(350);
+      }
+      &__purple_shape {
+        position: relative;
+        transform: rotate(-14deg);
+        width: rem-cal(350);
+      }
+    }
+
+
+
+  }
+}
